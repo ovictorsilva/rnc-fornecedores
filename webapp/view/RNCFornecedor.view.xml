@@ -1,0 +1,368 @@
+<mvc:View
+    controllerName="com.inbetta.rncfornecedor.controller.RNCFornecedor"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core"
+	xmlns:smartForm="sap.ui.comp.smartform"
+	xmlns:smartField="sap.ui.comp.smartfield"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:t="sap.ui.table"
+    xmlns:sf="sap.ui.comp.smartfield"
+    height="100%">
+    <Page id="page" title="{i18n>title}" class="sapUiTinyMargin">
+        <VBox id="vBox1" class="sapUiTinyMargin">
+            <Panel id="panel1" height="400px" headerText="Nota QM" class="sapUiDemoFlexBoxSizeAdjustments">
+                <FlexBox
+                    id="fb1"
+                    height="50px"
+                    width="100%"
+                    alignItems="Start"
+                    justifyContent="Start"
+                    renderType="Div"
+                    class="sapUiDemoFlexBoxSizeAdjustmentsZeroWidthItems">
+                    <Input id="iptNumNota" class="sapUiTinyMargin" width="95%" editable="false">
+                        <layoutData>
+                            <FlexItemData id="flxItm1" growFactor="2" />
+                        </layoutData>
+                    </Input>
+
+                    <Input id="iptDescNota" class="sapUiTinyMargin" width="97%" editable="false" value="">
+                        <layoutData>
+                            <FlexItemData id="flxItm2"  growFactor="30"/>
+                        </layoutData>
+                    </Input>
+
+                    <Label id="lblDtAbertura" class="sapUiTinyMargin" width="auto" text="Data Abertura">
+                        <layoutData>
+						    <FlexItemData id="flxItm3" growFactor="1" />
+					    </layoutData>
+                    </Label>
+
+                    <Input id="iptDtAbertura" class="sapUiTinyMargin" width="95%" editable="false" value="">
+                        <layoutData>
+						    <FlexItemData id="flxItm4" growFactor="1" />
+					    </layoutData>
+                    </Input>
+
+                    <Input id="iptStatusNota" class="sapUiTinyMargin" width="95%" editable="false" value="">
+                        <layoutData>
+						    <FlexItemData id="flxItm5" growFactor="1" />
+					    </layoutData>    
+                    </Input>
+                    
+                </FlexBox>
+                <FlexBox
+                    id="fb2"
+                    height="50px"
+                    width="100%"
+                    alignItems="Start"
+                    justifyContent="Start"
+                    renderType="Div"
+                    class="sapUiDemoFlexBoxSizeAdjustmentsZeroWidthItems">
+
+                    <Label id="lblMaterial" class="sapUiTinyMargin" width="100%" text="Material">
+                        <layoutData>
+						    <FlexItemData id="flxItm21" growFactor="2" />
+					    </layoutData>
+                    </Label>
+                    
+                    <Input id="iptMaterial" class="sapUiTinyMargin" width="95%" editable="false" value="">
+                        <layoutData>
+						    <FlexItemData id="flxItm22" growFactor="10" />
+					    </layoutData>
+                    </Input>
+
+                    <Input id="iptMaterialDesc" class="sapUiTinyMargin" width="95%" editable="false" value="">
+                        <layoutData>
+						    <FlexItemData id="flxItm23" growFactor="30" />
+					    </layoutData>
+                    </Input>
+
+                    <Label id="lblQtdTot" class="sapUiTinyMargin" width="auto" text="Qtde total">
+                        <layoutData>
+						    <FlexItemData id="flxItm24" growFactor="1" />
+					    </layoutData>
+                    </Label>
+
+                    <Input id="iptQtdTot" class="sapUiTinyMargin" width="95%" editable="false" value="">
+                        <layoutData>
+						    <FlexItemData id="flxItm25" growFactor="1" />
+					    </layoutData>
+                    </Input>
+
+                    <Input id="iptQtdTotUM" class="sapUiTinyMargin" width="95%" editable="false" value="">
+                        <layoutData>
+						    <FlexItemData id="flxItm26" growFactor="1" />
+					    </layoutData>    
+                    </Input>
+                    
+                </FlexBox>
+                <FlexBox
+                    id="fb3"
+                    height="50px"
+                    width="100%"
+                    alignItems="Start"
+                    justifyContent="Start"
+                    renderType="Div"
+                    class="sapUiDemoFlexBoxSizeAdjustmentsZeroWidthItems">
+
+                    <Label id="lblFornecedor" class="sapUiTinyMargin" width="100%" text="Fornecedor">
+                        <layoutData>
+						    <FlexItemData id="flxItm31" growFactor="2" />
+					    </layoutData>
+                    </Label>
+                    
+                    <Input id="iptFornecedor" class="sapUiTinyMargin" width="95%" editable="false" value="">
+                        <layoutData>
+						    <FlexItemData id="flxItm32" growFactor="10" />
+					    </layoutData>
+                    </Input>
+
+                    <Input id="iptFornecedorDesc" class="sapUiTinyMargin" width="95%" editable="false" value="">
+                        <layoutData>
+						    <FlexItemData id="flxItm33" growFactor="30" />
+					    </layoutData>
+                    </Input>
+
+                    <Label id="lblQtdRep" class="sapUiTinyMargin" width="auto" text="Qtde reprovada">
+                        <layoutData>
+						    <FlexItemData id="flxItm34" growFactor="1" />
+					    </layoutData>
+                    </Label>
+
+                    <Input id="iptQtdRep" class="sapUiTinyMargin" width="95%" editable="false" value="">
+                        <layoutData>
+						    <FlexItemData id="flxItm35" growFactor="1" />
+					    </layoutData>
+                    </Input>
+
+                    <Input id="iptQtdRepUM" class="sapUiTinyMargin" width="95%" editable="false" value="">
+                        <layoutData>
+						    <FlexItemData id="flxItm36" growFactor="1" />
+					    </layoutData>    
+                    </Input>
+                </FlexBox>
+                <FlexBox
+                    id="fb4"
+                    height="50px"
+                    alignItems="Start"
+                    justifyContent="Start"
+                    renderType="Div"
+                    class="sapUiDemoFlexBoxSizeAdjustmentsZeroWidthItems">
+
+                    <Label id="lblEmitente" class="sapUiTinyMargin" width="100%" text="Emitente">
+                        <layoutData>
+						    <FlexItemData id="flxItm41" growFactor="2" />
+					    </layoutData>
+                    </Label>
+                    
+                    <Input id="iptEmitente" class="sapUiTinyMargin" width="95%" editable="false" value="">
+                        <layoutData>
+						    <FlexItemData id="flxItm42" growFactor="10" />
+					    </layoutData>
+                    </Input>
+
+                    <Input id="iptEmitenteDesc" class="sapUiTinyMargin" width="95%" editable="false" value="">
+                        <layoutData>
+						    <FlexItemData id="flxItm43" growFactor="30" />
+					    </layoutData>
+                    </Input>
+
+                    <Label id="lblItem" class="sapUiTinyMargin" width="auto" text="Item">
+                        <layoutData>
+						    <FlexItemData id="flxItm441" growFactor="1" />
+					    </layoutData>
+                    </Label>
+
+                    <Input id="iptItem" class="sapUiTinyMargin" width="95%" editable="false" value="">
+                        <layoutData>
+						    <FlexItemData id="flxItm451" growFactor="1" />
+					    </layoutData>
+                    </Input>
+
+                    <Label id="lblNmrLote" class="sapUiTinyMargin" width="auto" text="Nr. Lote">
+                        <layoutData>
+						    <FlexItemData id="flxItm44" growFactor="1" />
+					    </layoutData>
+                    </Label>
+
+                    <Input id="iptNmrLote" class="sapUiTinyMargin" width="95%" editable="false" value="">
+                        <layoutData>
+						    <FlexItemData id="flxItm45" growFactor="1" />
+					    </layoutData>
+                    </Input>
+                </FlexBox>
+                <FlexBox
+                    id="fb5"
+                    height="50px"
+                    alignItems="Start"
+                    justifyContent="Start"
+                    renderType="Bare">
+                   
+			        <TextArea id="txtArea1" editable="false" placeholder="" growing="true" growingMaxLines="7" rows="6" width="100%"/>
+                </FlexBox>
+            </Panel>
+
+            <Panel id="panel2" height="auto" class="sapUiDemoFlexBoxSizeAdjustments">
+                <content>
+                    <Toolbar id="toolBar1" ariaLabelledBy="PlanodeAcao" design="Transparent" style="Clear">
+                        <Title id="Title333" text="Causa Raiz"/>
+                        <ToolbarSpacer id="tbSpacer1" />
+                        <Button id="btnAdd" text="Nova Causa" icon="sap-icon://add" press="onCausaAdd"  />
+				    </Toolbar>
+                    <Panel id="panel21" height="auto" class="sapUiDemoFlexBoxSizeAdjustments">
+                        <content>
+                            <l:Grid id="grid1" defaultSpan="L12 M12 S12" hSpacing="1" width="auto">
+                                <l:content>
+                                    <f:Form id="FormDisplay354">
+                                        <f:layout>
+                                        <f:ResponsiveGridLayout id="respGrid1" labelSpanL="2" labelSpanM="2" emptySpanL="2" emptySpanM="2" columnsL="1" columnsM="1" />
+                                        </f:layout>
+                                        <f:formContainers>
+                                            <f:FormContainer id="formCont1">
+                                                <f:formElements>
+                                                    <f:FormElement id="formElm1" label="Causa">
+                                                        <f:fields>
+                                                            <Input 
+                                                                id="iptCausa"
+                                                                showValueHelp="true"
+                                                                valueHelpRequest="onValueHelpCausa"
+                                                                placeholder="Selecione o código de causa"
+                                                                width="50%"/>
+                                                        </f:fields>
+                                                    </f:FormElement>
+                                                    <f:FormElement id="oSubjectElement" label="Descrição">
+                                                        <f:fields>
+                                                            <TextArea id="txtCausa" placeholder="Descreva a causa" growing="true" growingMaxLines="7" rows="4" width="100%"/>    
+                                                        </f:fields>
+                                                    </f:FormElement>
+                                                </f:formElements>
+                                            </f:FormContainer>
+                                        </f:formContainers>
+                                    </f:Form>
+                                </l:content>
+                            </l:Grid>
+                        </content>
+                    </Panel>
+                </content>
+            </Panel>
+
+            <Panel id="panel3" height="auto" class="sapUiDemoFlexBoxSizeAdjustments">
+                <content>
+                    <Toolbar id="toolBar2" ariaLabelledBy="PlanodeAcao" design="Transparent" style="Clear">
+                        <Title id="Title33" text="Plano de Ação"/>
+                        <ToolbarSpacer id="tbSpacer2"/>
+                        <Button id="btnAddMedida" text="Nova Medida" icon="sap-icon://add" press="onMedidaAdd"  />
+				    </Toolbar>
+                    <Panel id="panel31" height="auto" class="sapUiDemoFlexBoxSizeAdjustments">
+                        <content>
+                            <l:Grid id="grid2" defaultSpan="L12 M12 S12" hSpacing="1" width="auto">
+                                <l:content>
+                                    <f:Form id="FormDisplay2">
+                                        <f:layout>
+                                        <f:ResponsiveGridLayout id="respGrid2" labelSpanL="2" labelSpanM="2" emptySpanL="2" emptySpanM="2" columnsL="1" columnsM="1" />
+                                        </f:layout>
+                                        <f:formContainers>
+                                            <f:FormContainer id="formCont2">
+                                                <f:formElements>
+                                                    <f:FormElement id="formElm2" label="Medida">
+                                                        <f:fields>
+                                                            <Input 
+                                                                id="iptMedida"
+                                                                showValueHelp="true"
+                                                                valueHelpRequest="onValueHelpMedida"
+                                                                placeholder="Selecione o código de medida"
+                                                                width="50%"/>
+                                                        </f:fields>
+                                                    </f:FormElement>
+                                                    <f:FormElement id="oSubjectElement2" label="Descrição">
+                                                        <f:fields>
+                                                            <TextArea id="txtMedida" placeholder="Descreva o plano de ação" growing="true" growingMaxLines="7" rows="4" width="100%"/>    
+                                                        </f:fields>
+                                                    </f:FormElement>
+                                                </f:formElements>
+                                            </f:FormContainer>
+                                        </f:formContainers>
+                                    </f:Form>
+                                </l:content>
+                            </l:Grid>
+                        </content>
+                    </Panel>
+
+                </content>
+            </Panel>
+
+            <Panel id="panel4" height="auto" class="sapUiDemoFlexBoxSizeAdjustments" width="90%">
+                <content>
+                    <VBox id="vBox2" class="sapUiSmallMargin">
+                        <!-- Linha 1: A partir de qual lote teremos o problema sanado? -->
+                        <HBox id="hBox1" width="100%" >
+                            <Label id="lblQa1" class="sapUiTinyMargin" wrapping="true" text="A partir de qual lote teremos o problema sanado?" labelFor="loteInput" width="auto" />
+                            <Input id="loteInput" width="100%" >
+                                <layoutData>
+                                    <FlexItemData id="flxItm51" minWidth="200px" growFactor="1"/>
+                                </layoutData>
+                            </Input>
+
+                        </HBox>
+
+                        <!-- Linha 2: Data prevista para envio do primeiro lote -->
+                        <HBox id="hBox2" width="100%">
+                            <Label id="lblQa2" class="sapUiTinyMargin" wrapping="true" text="Data prevista para envio do primeiro lote após implementação das ações corretivas:" labelFor="dataInput" width="auto" />
+                            <DatePicker showFooter="true" id="dataInput" width="100%"  >
+                                <layoutData>
+                                    <FlexItemData minWidth="200px" id="flxItm52" growFactor="1"/>
+                                </layoutData>
+                            </DatePicker>
+                        </HBox>
+
+                        <!-- Linha 3: Como o lote estará identificado? -->
+                        <HBox id="hBox3" width="100%">
+                            <Label id="lblQa3" class="sapUiTinyMargin" wrapping="true" text="Como o lote estará identificado?" labelFor="identLoteInput" width="auto" />
+                            <Input id="identLoteInput" width="100%" >
+                                <layoutData>
+                                    <FlexItemData id="flxItm53" minWidth="200px" growFactor="1"/>
+                                </layoutData>
+                            </Input>
+                        </HBox>
+
+                        <!-- Linha 4: Responsável, Cargo, E-mail e Telefone -->
+                        <HBox id="hBox4" width="100%">
+                            <Label id="lblQa4" class="sapUiTinyMargin" wrapping="true" text="Resp:" width="100%" />
+                            <Input id="iptResp" width="100%" >
+                                <layoutData>
+                                    <FlexItemData id="flxItm54" minWidth="200px" growFactor="1"/>
+                                </layoutData>
+                            </Input>
+                            <Label id="lblQa5" class="sapUiTinyMargin" wrapping="true" text="Cargo:" width="100%" />
+                            <Input id="iptCargo" width="100%"  >
+                                <layoutData>
+                                    <FlexItemData id="flxItm55" minWidth="200px" growFactor="1"/>
+                                </layoutData>
+                            </Input>
+                        </HBox>
+
+                        <HBox id="hBox5" width="100%">
+                            <Label id="lblQa6" class="sapUiTinyMargin" wrapping="true" text="E-mail:" width="100%" />
+                            <Input id="iptEmail" width="100%" >
+                                <layoutData>
+                                    <FlexItemData id="flxItm56" growFactor="1"/>
+                                </layoutData>
+                            </Input>
+                            <Label id="lblQa7" class="sapUiTinyMargin" wrapping="true" text="Fone:" width="100%" />
+                            <Input id="iptFone" width="100%" >
+                                <layoutData>
+                                    <FlexItemData id="flxItm57" minWidth="200px" growFactor="1"/>
+                                </layoutData>
+                            </Input>
+                        </HBox>
+                        <Button id="btnSubmit" text="Enviar" press="onGravar"/>
+                    </VBox>
+                </content>
+            </Panel>
+        </VBox>
+    </Page>
+</mvc:View>

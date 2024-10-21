@@ -1,0 +1,25 @@
+# yaml-language-server: $schema=https://sap.github.io/ui5-tooling/schema/ui5.yaml.json
+
+specVersion: "3.1"
+metadata:
+  name: com.inbetta.rncfornecedor
+type: application
+builder:
+  resources:
+    excludes:
+      - /test/**
+      - /localService/**
+  customTasks:
+    - name: deploy-to-abap
+      afterTask: generateCachebusterInfo
+      configuration:
+        target:
+          url: https://vhbtsde1ci.sap.inbetta.com:44300
+          client: "100"
+        app:
+          name: ZZ1_RNC_FORNEC
+          description: App RNC Fornecedor
+          package: ZQM_RNC_APP
+          transport: DE1K975654
+        exclude:
+          - /test/

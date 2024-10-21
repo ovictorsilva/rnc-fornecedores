@@ -1,0 +1,28 @@
+{
+    "RNCFornecedoresSet":{
+        "Qmnum" : "200000129",
+        "Material" : "4004846",
+        "Bzmng" : "660.000",
+        "Mgein" : "PC",
+        "QuantComplaint" : "660.000",
+        "QtyUnit" : "PC",
+        "Vendrbatch" : "",
+        "ObjectNo" : "QM000200000129",
+        "Fornecedor" : "3004185",
+        "Status" : "0",
+        "Erdat" : "\/Date(1580342400000)\/",
+        "Autor" : "17358",
+        "DtCriacao" : "\/Date(1725235200000)\/",
+        "HrCriacao" : "PT10H14M10S",
+        "DtEnvioFornec" : null,
+        "DtRetornoFornec" : null,
+        "DtUltAtuBase" : null,
+        "ZzrncPrxLotSan" : "",
+        "ZzrncDtEnvPrxLotSan" : null,
+        "ZzrncIdentLote" : "",
+        "ZzrncResponsavel" : "",
+        "ZzrncCargo" : "",
+        "ZzrncEmail" : "",
+        "ZzrncFone" : ""
+    }
+}
